@@ -1,0 +1,231 @@
+/* ── Two-column layout ── */
+.profile-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Shared panel style ── */
+.profile-form,
+.profile-display {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.profile-form h2,
+.profile-display h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4f46e5;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e8e5ff;
+}
+
+/* ── Form fields ── */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+.field-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.field-group input {
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  border: 1.5px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #2d3748;
+  background: #f7fafc;
+  transition: border-color 0.2s;
+}
+
+.field-group input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background: #fff;
+}
+
+/* ── Input + button side-by-side ── */
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-row input {
+  flex: 1;
+}
+
+/* ── Buttons ── */
+button {
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #4f46e5;
+  color: #fff;
+  transition: background 0.2s, transform 0.1s;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: #4338ca;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.full-width-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* ── Preferences / toggle ── */
+.preferences-group h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #4a5568;
+  margin-bottom: 0.75rem;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.toggle-row span {
+  font-size: 0.95rem;
+  color: #2d3748;
+}
+
+.toggle-btn {
+  padding: 0.4rem 1rem;
+  background: #e2e8f0;
+  color: #4a5568;
+  font-size: 0.85rem;
+}
+
+.toggle-btn.active {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.toggle-btn:hover {
+  background: #cbd5e0;
+}
+
+.toggle-btn.active:hover {
+  background: #4338ca;
+}
+
+/* ── Profile display card ── */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.profile-section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #a0aec0;
+  margin-top: 0.75rem;
+  margin-bottom: 0.1rem;
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.profile-row .label {
+  font-size: 0.85rem;
+  color: #718096;
+  min-width: 90px;
+}
+
+.profile-row .value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2d3748;
+  text-align: right;
+  word-break: break-word;
+}
+
+/* ── Badges ── */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge-on {
+  background: #c6f6d5;
+  color: #276749;
+}
+
+.badge-off {
+  background: #fed7d7;
+  color: #9b2c2c;
+}
+
+/* ── JSON preview ── */
+.json-preview {
+  margin-top: 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.json-preview summary {
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a5568;
+  cursor: pointer;
+  background: #f7fafc;
+  user-select: none;
+}
+
+.json-preview summary:hover {
+  background: #edf2f7;
+}
+
+.json-preview pre {
+  padding: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  background: #1a202c;
+  color: #a8ff78;
+  overflow-x: auto;
+}
